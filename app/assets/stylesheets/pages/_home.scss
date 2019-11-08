@@ -15,3 +15,13 @@ h1 {
 .container {
   display: inline-block;
 }
+
+body {
+  background: #eb01a5;
+  background-image:
+  linear-gradient(to bottom, rgba(17, 1, 50, 0.8), rgba(255, 221, 51, 0.4)),
+  url("https://i.pinimg.com/originals/41/a5/04/41a504da9eaaff885e6524de305ea28b.jpg");
+  background-position: center;
+  background-size: cover;
+
+}
