@@ -1,12 +1,20 @@
-<div class="container">
+<p id="notice"><%= notice %></p>
 
-  <h2><%= @cocktail.name %></h2>
+ <div class="banner cocktail">
+    <div class="row">
+      <div><h1 class="show"><%= @cocktail.name %></h1></div>
+     <div class="links" style="text-align:right;">
+      ..........<%= link_to raw('<i class="fas fa-undo-alt"></i>'), @cocktail, class: 'return' %>..
+      <%= link_to raw('<i class="fas fa-cocktail"></i>'), cocktails_path, class: 'back' %>
+     </div>
+    </div>
+    <div class="spacer10"></div>
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.association :ingredient %>
-  <%= f.input :description, label: "Amount" %>
-  <%= f.submit "Add ingredient" %>
-<% end %>
-
-
+    <div class="form">
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.association :ingredient %>
+        <%= f.input :description, label: "Amount" %>
+        <%= f.submit "Add ingredient", class: "btn btn-primary my-2 my-sm-0 ml-2"%>
+      <% end %>
+    </div>
 </div>
