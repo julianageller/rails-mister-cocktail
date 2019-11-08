@@ -12,7 +12,9 @@ img {
   height: auto;
 }
 
-.banner.cocktail {
+.container.cocktail {
+  margin-top: 70px;
+  text-align: left;
   background: white;
   padding-left: 40px;
   padding-top:  30px;
@@ -20,7 +22,7 @@ img {
   padding-bottom: 30px;
 }
 
-.banner h1 {
+.container h1 {
   color: $turquoise;
 }
 
@@ -31,12 +33,6 @@ h2 {
 
 .spacer10 {
   height: 10px;
-}
-
-.banner {
-  width: 100%;
-  margin-top: 10px;
-  text-align: left;
 }
 
 .ingredients {
