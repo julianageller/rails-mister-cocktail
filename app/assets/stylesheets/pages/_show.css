@@ -1,0 +1,31 @@
+.banner {
+  height: 20%;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  margin: 50px;
+}
+
+.show {
+  color: $yellowish;
+  font-size: 30px;
+}
+
+h2 {
+  color: white;
+  font-size: 26px;
+}
+
+.spacer10 {
+  height: 10px;
+}
+
+body {
+  color: white;
+}

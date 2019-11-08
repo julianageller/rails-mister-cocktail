@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<div class="banner" style="background-image: url(<% @cocktail.image %>)">
+</div>
+  <div class="container">
+
+      <h1 class="show"><%= @cocktail.name %></h1>
+      <div class="spacer10"></div>
+
+    <p>
+      <h2>Ingredients:</h2>
+      <br>
+        <% @cocktail.doses.each do |dose| %>
+      <ul>
+        <li>
+          <%= dose.ingredient.name.capitalize %> - <%= dose.description %>
+        </li>
+      </ul>
+     <% end %>
+    </p>
+    <%= link_to 'Add or edit ingredients', edit_cocktail_path(@cocktail) %>
+    <%= link_to 'Back', cocktails_path %>
+  </div>
+
+
+

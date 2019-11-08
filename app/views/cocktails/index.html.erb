@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="spacer20"></div>
+
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-4">
+      <div class="card" style="width: 18rem;">
+        <%= image_tag cocktail.image, class: "card-img-top" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail) %></h5>
+          <%= link_to raw('<i class="far fa-edit"></i>'), edit_cocktail_path(cocktail), class: 'edit' %>
+          <%= link_to raw('<i class="far fa-trash-alt"></i>'), cocktail, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete' %>
+        </div>
+      </div>
+        <div class="spacer20"></div>
+    </div>
+    <% end %>
+  </div>
+</div>
+

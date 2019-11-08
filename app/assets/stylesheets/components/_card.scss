@@ -1,0 +1,19 @@
+.card {
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: $teal;
+  opacity: 0.9;
+}
+
+.edit {
+  color: $turquoise;
+}
+
+.delete {
+  color: $redish;
+}
+
+.card:hover {
+  opacity: 1;
+}

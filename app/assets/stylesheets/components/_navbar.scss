@@ -1,12 +1,19 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar {
+  background-color: $navy;
+  border-bottom: 0.3px solid #f4f4f48f;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-brand {
+  font-family: Righteous;
+  color: $yellowish;
+  font-size: 36px;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar a.navbar-brand:hover {
+  color: $yellowish;
+  opacity: 0.9;
 }
