@@ -1,15 +1,19 @@
 <p id="notice"><%= notice %></p>
+<!--
+<div class="banner d-flex align-items-center">
+</div> -->
+  <div class="banner cocktail">
+    <div class="row">
+    <h1 class="show"><%= @cocktail.name %></h1>
+    </div>
+    <div class="spacer10"></div>
+    <div class="row">
+      <div>
+        <img src="<%= cl_image_path @cocktail.image,  height: 300, width: 400, crop: :fill %>"></div>
 
-<div class="banner" style="background-image: url(<% @cocktail.image %>)">
-</div>
-  <div class="container">
-
-      <h1 class="show"><%= @cocktail.name %></h1>
-      <div class="spacer10"></div>
-
-    <p>
+      <div class="ingredients">
       <h2>Ingredients:</h2>
-      <br>
+      <div class="spacer10"></div>
         <% @cocktail.doses.each do |dose| %>
       <ul>
         <li>
@@ -17,9 +21,15 @@
         </li>
       </ul>
      <% end %>
-    </p>
-    <%= link_to 'Add or edit ingredients', edit_cocktail_path(@cocktail) %>
-    <%= link_to 'Back', cocktails_path %>
+     <div class="spacer10"></div>
+     <div class="links" style="text-align:center;">
+      <%= link_to raw('<i class="far fa-edit"></i>'), edit_cocktail_path(@cocktail), class: 'edit' %>...
+      <%= link_to raw('<i class="fas fa-cocktail"></i>'), cocktails_path, class: 'back' %>
+    </div>
+     </div>
+
+    </div>
+
   </div>
 
 

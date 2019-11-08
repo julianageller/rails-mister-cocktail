@@ -1,23 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @cocktail.name %>
-</p>
+ <div class="banner cocktail">
+    <div class="row">
+    <h1 class="show"><%= @cocktail.name %></h1>
+    </div>
+    <div class="spacer10"></div>
+    <div class="row">
+      <div>
+        <img src="<%= cl_image_path @cocktail.image,  height: 300, width: 400, crop: :fill %>"></div>
 
-<p>
-  <strong>Ingredients:</strong>
-  <% @cocktail.doses.each do |dose| %>
-  <ul>
-    <li>
-      <%= dose.ingredient.name.capitalize %> - <%= dose.description %>
-      <%= link_to raw('<i class="far fa-trash-alt"></i>'), dose, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </li>
-  </ul>
-  <% end %>
-</p>
+      <div class="ingredients">
+      <h2>Ingredients:</h2>
+      <div class="spacer10"></div>
+        <% @cocktail.doses.each do |dose| %>
+      <ul>
+        <li>
+          <%= dose.ingredient.name.capitalize %> - <%= dose.description %>
+          <%= link_to raw('<i class="far fa-trash-alt"></i>'), dose, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete' %>
+        </li>
+      </ul>
+     <% end %>
+     <div class="spacer10"></div>
+     <div class="links" style="text-align:center;">
+      <%= link_to raw('<i class="fas fa-plus"></i>'), new_cocktail_dose_path(@cocktail), class: 'edit' %>..
+      <%= link_to raw('<i class="far fa-trash-alt"></i>'), @cocktail, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete' %>..
+      <%= link_to raw('<i class="fas fa-undo-alt"></i>'), @cocktail, class: 'return' %>..
+      <%= link_to raw('<i class="fas fa-cocktail"></i>'), cocktails_path, class: 'back' %>
+     </div>
+     </div>
 
-<%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail) %>
-<%= link_to raw('<i class="far fa-trash-alt"></i>'), @cocktail, method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to 'Cancel', cocktails_path %>
+    </div>
 
+  </div>

@@ -4,6 +4,7 @@
   border-width: 3px;
   border-color: $teal;
   opacity: 0.9;
+  text-align: left;
 }
 
 .edit {
@@ -16,4 +17,28 @@
 
 .card:hover {
   opacity: 1;
+}
+
+.card-columns {
+  vertical-align: top;
+
+}
+
+.container {
+   display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-title a {
+  color: #ffdc34;
+  font-size: 30px;
+  text-align: left;
+}
+
+.links {
+  text-align: right;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
 }
